@@ -1,0 +1,113 @@
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.welcome-box {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0;
+  padding: 1rem 2rem 1rem 2rem;
+  background-color: #0c0c0c;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  
+
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* due colonne uguali */
+  gap: 2rem;
+
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.welcome-box-text {
+  text-align: left;
+  margin: 0;
+  font-size: 4rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome-box-text2 {
+  text-align: left;
+  margin: 0;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mini-boxes {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  flex-wrap: nowrap; 
+  -webkit-mask-image: linear-gradient(to right, transparent, black);
+  mask-image: linear-gradient(to right, transparent, black);
+
+}
+
+@media (max-width: 1000px) {
+  .mini-boxes {
+    flex-wrap: wrap;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
+
+
+}
+  .welcome-box {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto; 
+}
+  .welcome-box-text {
+    text-align: center;
+  }
+  .welcome-box-text2 {
+  text-align: center;
+  }
+}
+
+.texts {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.positive {
+  background-color: rgb(0, 163, 0);
+  border-radius: 8px;
+}
+
+.negative {
+  background-color: rgb(207, 0, 0);
+  border-radius: 8px;
+}
+
+.neutral {
+  background-color: #8585855b;
+  border-radius: 8px;
+}
+
+.mini-box {
+  flex: 1; /* larghezza uguale */
+  background-color: #0c0c0c;
+  border:1px solid #3d3d3d94;
+  color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  animation: slide-in-bottom 0.9s 0.5s both;
+  -webkit-animation: slide-in-bottom 0.9s 0.5s both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,259 @@
+
+
+
+
+.NA{
+    padding: 4rem;
+    color: rgb(153, 153, 153)
+}
+
+
+
+
+.bottone {
+  background-color: #0e0e0e;
+  color: white;
+  border: 1px solid #3d3d3d94;
+  padding: 0.5rem 0.9rem;
+  border-radius: 90px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  outline: none
+}
+
+.bottone:hover {
+  background-color: #3a3a3a;
+  transform: scale(1.03);
+}
+
+
+.plus-button {
+  font-size: 2rem;
+  padding: 0.2rem 0.2rem;
+  border-radius: 90px;
+  
+  background: #0e0e0e;
+  border: 1px solid #3d3d3d94;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 20;
+}
+
+.plus-button:hover {
+  background-color: rgb(0, 163, 0);
+}
+
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.watchlist-ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #0c0c0c;
+
+  opacity: 0;
+  animation: slideUpFade 0.8s ease forwards;
+  margin-top: 0.5rem;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.watchlist-ul li:hover {
+  background-color: #252525;
+}
+
+.watchlist-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+.watchlist-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  background-color: #1E1E1E;
+  border-bottom: 1px solid #333;
+  border-radius: 8px;
+  margin-bottom: 0.4rem;
+  transition: background-color 0.3s ease;
+  animation: slideUpFade 0.8s ease forwards;
+}
+
+.watchlist-item:hover {
+  background-color: #252525;
+}
+
+.watchlist-item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.watchlist-item h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.watchlist-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.watchlist-item button {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.positive {
+  background-color: rgb(0, 163, 0);
+  border-radius: 8px;
+  color: white;
+  padding: 0 4px;
+}
+
+.negative {
+  background-color: rgb(207, 0, 0);
+  border-radius: 8px;
+  color: white;
+  padding: 0 4px;
+}
+
+.neutral {
+  background-color: #8585855b;
+  border-radius: 8px;
+  color: white;
+  padding: 0 4px;
+}
+
+/* styles.css */
+@keyframes rotate-left {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes rotate-reset {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.rotate-left {
+  animation: rotate-left 0.3s ease-in-out forwards;
+}
+
+.rotate-reset {
+  animation: rotate-reset 0.3s ease-in-out forwards;
+}
+
+
+.watchlist-wrapper {
+  padding: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  background-color: #0c0c0c;
+  color: white;
+  border-radius: 10px;
+  animation: fadeIn 0.6s ease forwards;
+  border: 1px solid #3d3d3d94;
+}
+
+.watchlist-header {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.watchlist-content {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.watchlist-box {
+  flex: 1;
+  transition: margin-right 0.3s ease;
+
+}
+
+
+
+.slide-box {
+  position: absolute;
+  top: 2rem; 
+  right: 2rem;
+  left: 1rem;
+  background-color: #0c0c0c;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(+50px);
+  transition: all 0.7s ease;
+  z-index: 10;
+  border-bottom: 1px solid #3d3d3d94;
+}
+
+.slide-box.visible {
+  opacity: 1;
+  transform: translateX(0px);
+  pointer-events: auto;
+}
+
+

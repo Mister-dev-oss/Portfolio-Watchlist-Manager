@@ -1,0 +1,46 @@
+.PortfolioPage-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px;
+  width: 100%;
+  max-width: auto; 
+  max-height: 1300px;
+  margin: 0rem;   
+  padding: 20px;
+  border: 1px solid #3d3d3d94;
+  border-radius: 10px;
+}
+
+.PortfolioPage-container-item {
+  background: transparent;
+  margin: 1rem;
+  border-radius: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 200px; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 50%;
+}
+
+.PortfolioPage-container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px;
+  width: 100%;
+  max-width: auto; 
+  max-height: 1300px;
+  margin: 0rem;   
+  padding: 20px;
+  border: 1px solid #3d3d3d94;
+  border-radius: 10px;
+}
+
+.PortfolioPage-container-item2 {
+  background: transparent;
+  margin: 1rem;
+  padding: 20px;
+  min-height: auto; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-right: 1px solid #3d3d3d94;
+  max-width: auto;
+}

@@ -1,0 +1,57 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 100vh;
+  background-color: #0e0e0e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+
+  border-right: 1px solid #3d3d3d94;
+}
+
+.logo-placeholder {
+  width: 48px;
+  height: 48px;
+  background-color: #555;
+  border-radius: 50%;
+}
+
+.nav-links {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* verticale */
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.nav-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #0e0e0e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: 0.5px solid rgb(92, 92, 92);     /* Bordo invisibile di default */
+  border-radius: 90%;
+}
+
+.nav-circle:hover {
+  background-color: #666;
+  transform: scale(1.05);
+}
+
+.nav-circle.active {
+  background-color: #ffffff;
+  color: black;
+}

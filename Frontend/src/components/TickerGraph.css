@@ -1,0 +1,16 @@
+.message{
+    padding: 5rem;
+    font-size: 1.5rem;
+    color: #353535
+}
+
+.chart {
+  padding: 1rem;
+  background-color: #0c0c0c;
+  border-radius: 8px;
+  width: 100%;        
+  aspect-ratio: 16 / 9;;       
+  max-width: 1280px;
+  max-height: 690px;
+  box-sizing: border-box; 
+}
