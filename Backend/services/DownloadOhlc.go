@@ -33,6 +33,9 @@ func ServicesDownloadOhlcInDB(db *sql.DB, ticker string) error {
 
 	data, err := external.FetchOHLC(ticker, fromDate, toDate)
 	if err != nil {
+		if err.Error() == "errore HTTP: 403 Forbidden" {
+			return nil
+		}
 		return err
 	}
 
