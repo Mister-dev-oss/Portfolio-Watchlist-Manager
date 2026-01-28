@@ -113,6 +113,15 @@ Before running the backend, you **must** set up your environment variables for A
 
 ---
 
+## Bugs
+There is a bug in the portfolio section, if one of the stocks that the search menu proposes you is not provided
+by the financial api, this causes your backend to crash, needing for a restart of the http server.
+Unfortunately this could be caused by a change in tickers, which a hardcoded stock ticker list like the one
+i use in this project can't keep up.
+Using well known stocks is the best choice to avoid this bug.
+
+---
+
 ## Disclaimer
 
 This project is for educational purposes only.  
